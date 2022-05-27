@@ -4,7 +4,7 @@ sudo apt install qemu-system-x86-xen -y
 sudo apt install qemu-system-x86 -y
 qemu-img create -f raw Tiny10.img 64G
 wget -O RTL8139F.iso 'https://drive.google.com/uc?export=download&id=1wDL8vo9mmYKw1HKXZzaYHoKmzSt_wXai'
-wget -O Tiny10.iso 'https://dl.malwarewatch.org/windows/mods/Tiny%2010.iso'
+wget -O Tiny10.iso 'https://udomain.dl.sourceforge.net/project/blissos-dev/Android-Generic/PC/bliss/S/foss/alpha/Bliss-v15.0-Alpha-android_x86_64-OFFICIAL-foss-202112151838-nb-sd-ksu-gearlock-ex_vt-console_all-mesa-drivers-crocus.iso'
 
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
