@@ -4,7 +4,6 @@ sudo apt install qemu-system-x86-xen -y
 sudo apt install qemu-system-x86 -y
 qemu-img create -f raw Ubuntu.img 64G
 wget -O Ubuntu.iso 'https://releases.ubuntu.com/22.04/ubuntu-22.04-desktop-amd64.iso'
-
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
   -m 4G \
