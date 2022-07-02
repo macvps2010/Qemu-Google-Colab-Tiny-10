@@ -10,7 +10,7 @@ sudo apt install qemu-utils -y
 sudo apt install qemu-system-x86-xen -y
 sudo apt install qemu-system-x86 -y
 qemu-img create -f raw Ubuntu.img 64G
-wget -O Ubuntu.iso 'https://bafybeicb4hea75pkq6av72gcput3t5mdnensaobwkcqonpvyjnvsx6ekom.ipfs.dweb.link/?filename=AndroidTV.iso'
+wget -O Ubuntu.iso 'https://ia803409.us.archive.org/18/items/androidtv-x86/ATV-9-X86-Techinfo-k4.19.105-64bit.iso'
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
   -m 8G \
