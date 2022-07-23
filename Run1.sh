@@ -11,7 +11,7 @@ sudo apt install qemu-system-x86-xen -y
 sudo apt install qemu-system-x86 -y
 qemu-img create -f raw Ubuntu.img 64G
 qemu-img create -f raw ABC.img 64G
-wget -O Ubuntu.iso 'https://ia803409.us.archive.org/18/items/androidtv-x86/ATV-9-X86-Techinfo-k4.19.105-64bit.iso'
+wget -O Ubuntu.iso 'https://github.com/pearOS-archlinux/iso/releases/download/v22.06-release-candidate/pearOS-NiceC0re-2022.07-x86_64.iso'
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
   -m 16G \
