@@ -1,13 +1,20 @@
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+unzip ngrok-stable-linux-amd64.zip &>/dev/null &
+unzip ngrok-stable-linux-amd64.zip1 &>/dev/null &
+read -p "Ctrl + V Authtoken: " CRP 
+./ngrok authtoken $CRP 
+nohup ./ngrok tcp 3388 &>/dev/null &
+./ngrok tcp 3388 &>/dev/null &
 sudo apt-get update && apt-get install qemu -y
 sudo apt install qemu-utils -y
 sudo apt install qemu-system-x86-xen -y
 sudo apt install qemu-system-x86 -y
 qemu-img create -f raw Ubuntu.img 64G
-wget -O Ubuntu.iso 'https://releases.ubuntu.com/22.04/ubuntu-22.04-desktop-amd64.iso'
+wget -O Ubuntu.iso 'https://download2438.mediafire.com/640gq3xhxd5g/jxyc8n25s1asati/tiny10+21H2+x64+2209.iso'
 
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
-  -m 4G \
+  -m 8G \
   -cpu EPYC \
   -boot order=d \
   -drive file=Ubuntu.iso,media=cdrom \
